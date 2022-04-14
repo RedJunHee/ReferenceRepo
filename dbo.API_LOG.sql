@@ -1,5 +1,6 @@
 CREATE TABLE API_LOG (
 	SEQ	BIGINT	NOT NULL,
+    SUID VARCHAR(18) NOT NULL,
 	API_NAME	VARCHAR(100)	NOT NULL,
 	API_DESC	VARCHAR(8000)	NOT NULL,
 	API_STATUS	CHAR(1)	NOT NULL,
@@ -14,6 +15,8 @@ ALTER TABLE API_LOG ADD CONSTRAINT PK_API_LOG PRIMARY KEY NONCLUSTERED (
 CREATE CLUSTERED INDEX [CL_API_LOG_COL_CREATEDT] ON [API_LOG] (CREATE_DT)
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'시퀀스 로그 ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'API_LOG', @level2type=N'COLUMN',@level2name=N'SEQ';
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SUID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'API_LOG', @level2type=N'COLUMN',@level2name=N'SUID';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'API 명' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'API_LOG', @level2type=N'COLUMN',@level2name=N'API_NAME';
 
