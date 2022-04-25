@@ -14,15 +14,21 @@ ALTER TABLE USER_TOS ADD CONSTRAINT PK_USER_TOS PRIMARY KEY CLUSTERED (
 	SUID
 ) WITH FILLFACTOR = 90;
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'사용자 유니크 ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'SUID';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'사용자 유니크 ID' , @level0type=N'SCHEMA',@level0name=N'dbo',
+ @level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'SUID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'서비스 이용약관 여부' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'SERVICE_TOS_YN';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'서비스 이용약관 여부' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+@level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'SERVICE_TOS_YN';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'개인정보 수집 및 이용 여부' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'USER_INFO_YN';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'개인정보 수집 및 이용 여부' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+@level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'USER_INFO_YN';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'위치정보 수집 및 이용 여부' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'LOCATION_INFO_YN';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'위치정보 수집 및 이용 여부' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+@level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'LOCATION_INFO_YN';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'만 14세 이상 여부' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'AGE_COLLECTION_YN';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'만 14세 이상 여부' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+@level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'AGE_COLLECTION_YN';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'마케팅 정보 수신 동의' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'MARKETING_YN';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'마케팅 정보 수신 동의' , @level0type=N'SCHEMA',@level0name=N'dbo',
+ @level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'MARKETING_YN';
 

@@ -9,6 +9,8 @@ ALTER TABLE JWT_REFRESH_TOKEN_LOG ADD CONSTRAINT PK_JWT_REFRESH_TOKEN_LOG PRIMAR
 ) WITH FILLFACTOR = 90;
 
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'서비스 유저 ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'JWT_REFRESH_TOKEN_LOG', @level2type=N'COLUMN',@level2name=N'USER_SUID';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'서비스 유저 ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',
+@level1name=N'JWT_REFRESH_TOKEN_LOG', @level2type=N'COLUMN',@level2name=N'USER_SUID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'리프레시 토큰' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'JWT_REFRESH_TOKEN_LOG', @level2type=N'COLUMN',@level2name=N'REFRESH_TOKEN';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'리프레시 토큰' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',
+@level1name=N'JWT_REFRESH_TOKEN_LOG', @level2type=N'COLUMN',@level2name=N'REFRESH_TOKEN';

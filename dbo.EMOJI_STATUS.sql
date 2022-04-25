@@ -23,17 +23,17 @@ ALTER TABLE [dbo].[EMOJI_STATUS] CHECK CONSTRAINT FK_EMOJI_STATUS
 
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'이모지 고유 ID' , @level0type=N'SCHEMA',@level0name=N'dbo', 
-@level1type=N'TABLE',@level1name=N'SMS_REQUEST_LOG', @level2type=N'COLUMN',@level2name=N'EMOJI_ID';
+@level1type=N'TABLE',@level1name=N'EMOJI_STATUS', @level2type=N'COLUMN',@level2name=N'EMOJI_ID';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'리뷰 ID' , @level0type=N'SCHEMA',@level0name=N'dbo', 
-@level1type=N'TABLE',@level1name=N'SMS_REQUEST_LOG', @level2type=N'COLUMN',@level2name=N'REVIEW_ID';
+@level1type=N'TABLE',@level1name=N'EMOJI_STATUS', @level2type=N'COLUMN',@level2name=N'REVIEW_ID';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SUID' , @level0type=N'SCHEMA',@level0name=N'dbo', 
-@level1type=N'TABLE',@level1name=N'SMS_REQUEST_LOG', @level2type=N'COLUMN',@level2name=N'USER_SUID';
+@level1type=N'TABLE',@level1name=N'EMOJI_STATUS', @level2type=N'COLUMN',@level2name=N'USER_SUID';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'월드 ID' , @level0type=N'SCHEMA',@level0name=N'dbo', 
-@level1type=N'TABLE',@level1name=N'SMS_REQUEST_LOG', @level2type=N'COLUMN',@level2name=N'WORLD_ID';
+@level1type=N'TABLE',@level1name=N'EMOJI_STATUS', @level2type=N'COLUMN',@level2name=N'WORLD_ID';
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'생성날짜' , @level0type=N'SCHEMA',@level0name=N'dbo', 
-@level1type=N'TABLE',@level1name=N'SMS_REQUEST_LOG', @level2type=N'COLUMN',@level2name=N'CREATE_DT';
+@level1type=N'TABLE',@level1name=N'EMOJI_STATUS', @level2type=N'COLUMN',@level2name=N'CREATE_DT';
 

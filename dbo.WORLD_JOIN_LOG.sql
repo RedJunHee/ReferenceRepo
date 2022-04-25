@@ -14,11 +14,15 @@ CREATE CLUSTERED INDEX FK_WORLD_JOIN_LOG_CREATEDT ON WORLD_JOIN_LOG (CREATE_DT A
 
 
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SEQ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'WORLD_JOIN_LOG', @level2type=N'COLUMN',@level2name=N'SEQ';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SEQ' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+@level1type=N'TABLE',@level1name=N'WORLD_JOIN_LOG', @level2type=N'COLUMN',@level2name=N'SEQ';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SUID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'WORLD_JOIN_LOG', @level2type=N'COLUMN',@level2name=N'USER_SUID';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'SUID' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+@level1type=N'TABLE',@level1name=N'WORLD_JOIN_LOG', @level2type=N'COLUMN',@level2name=N'USER_SUID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'입장 월드' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'WORLD_JOIN_LOG', @level2type=N'COLUMN',@level2name=N'WORLD_ID';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'입장 월드' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+@level1type=N'TABLE',@level1name=N'WORLD_JOIN_LOG', @level2type=N'COLUMN',@level2name=N'WORLD_ID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'입장 날짜' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'WORLD_JOIN_LOG', @level2type=N'COLUMN',@level2name=N'CREATE_DT';
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'입장 날짜' , @level0type=N'SCHEMA',@level0name=N'dbo',
+@level1type=N'TABLE',@level1name=N'WORLD_JOIN_LOG', @level2type=N'COLUMN',@level2name=N'CREATE_DT';
 
