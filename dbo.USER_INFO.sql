@@ -5,19 +5,21 @@ CREATE TABLE USER_INFO (
 	NAME	VARCHAR(10)	NOT NULL,
 	PHONE	VARCHAR(15)	NOT NULL,
 	PROFILE_URL	VARCHAR(100)	NULL,
-	FCM_TOKEN	CHAR(163)	NULL
+	FCM_TOKEN	CHAR(163)	NULL,
+    CREATE_DT DATETIME NOT NULL
 );
 
 ALTER TABLE USER_INFO ADD CONSTRAINT PK_USER PRIMARY KEY NONCLUSTERED (
 	SUID
 );
 
+ALTER TABLE USER_INFO ADD CONSTRAINT UNIQUE_USER_PHONE UNIQUE (PHONE)
+ 
 -- UserID 검색.
 CREATE NONCLUSTERED INDEX [NC1_USER_COL_USERID] ON USER_INFO ([USER_ID])
 
 -- 핸드폰 검색.
 CREATE NONCLUSTERED INDEX [NC2_USER_COL_PHONE] ON USER_INFO ([PHONE])
-
 
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'사용자 유니크 ID (MPS+년+월+일+핸드폰번호)' , @level0type=N'SCHEMA',@level0name=N'dbo', 
@@ -37,3 +39,6 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'사용자 프로필 
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'FCM 토큰' , @level0type=N'SCHEMA',@level0name=N'dbo',
  @level1type=N'TABLE',@level1name=N'USER_INFO', @level2type=N'COLUMN',@level2name=N'FCM_TOKEN';
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'회원가입 날짜' , @level0type=N'SCHEMA',@level0name=N'dbo',
+ @level1type=N'TABLE',@level1name=N'USER_INFO', @level2type=N'COLUMN',@level2name=N'CREATE_DT';
