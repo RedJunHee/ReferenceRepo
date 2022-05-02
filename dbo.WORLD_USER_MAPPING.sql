@@ -10,7 +10,8 @@ CREATE TABLE WORLD_USER_MAPPING (
 ALTER TABLE WORLD_USER_MAPPING ADD CONSTRAINT PK_WORLD_USER_MAPPING PRIMARY KEY NONCLUSTERED (
 	USER_SUID,
 	WORLD_ID
-);
+) WITH FILLFACTOR = 90 ON [PRIMARY];
+
 
 ALTER TABLE WORLD_USER_MAPPING ADD CONSTRAINT FK_USER_TO_WORLD_USER_MAPPING_1 FOREIGN KEY (
 	USER_SUID
@@ -41,6 +42,3 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'월드 입장시 �
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'월드에 최근 접속한 시간' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'WORLD_USER_MAPPING', @level2type=N'COLUMN',@level2name=N'ACCESS_TIME';
-
-
-SP_HELP WORLD_USER_MAPPING

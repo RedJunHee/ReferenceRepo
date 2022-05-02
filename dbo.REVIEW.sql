@@ -10,7 +10,8 @@ CREATE TABLE REVIEW (
 
 ALTER TABLE REVIEW ADD CONSTRAINT PK_REVIEW PRIMARY KEY NONCLUSTERED (
 	REVIEW_ID
-);
+) WITH FILLFACTOR = 90 ON [PRIMARY];
+
 
 ALTER TABLE REVIEW ADD CONSTRAINT FK_PLACE_TO_REVIEW_1 FOREIGN KEY (
 	PLACE_ID
@@ -46,3 +47,4 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'생성 날짜' , @
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'수정 날짜' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'REVIEW', @level2type=N'COLUMN',@level2name=N'UPDATE_DT';
+

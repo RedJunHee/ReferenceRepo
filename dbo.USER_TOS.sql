@@ -12,7 +12,7 @@ CREATE TABLE USER_TOS (
 -- 저장만 함.
 ALTER TABLE USER_TOS ADD CONSTRAINT PK_USER_TOS PRIMARY KEY CLUSTERED (
 	SUID
-) WITH FILLFACTOR = 90;
+) WITH FILLFACTOR = 90 ON [PRIMARY]
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'사용자 유니크 ID' , @level0type=N'SCHEMA',@level0name=N'dbo',
  @level1type=N'TABLE',@level1name=N'USER_TOS', @level2type=N'COLUMN',@level2name=N'SUID';

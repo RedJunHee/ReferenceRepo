@@ -10,7 +10,7 @@ CREATE TABLE WORLD (
 
 ALTER TABLE WORLD ADD CONSTRAINT PK_WORLD PRIMARY KEY NONCLUSTERED (
 	WORLD_ID
-);
+) WITH FILLFACTOR = 90 ON [PRIMARY];
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Index°ª' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'WORLD', @level2type=N'COLUMN',@level2name=N'WORLD_ID';
