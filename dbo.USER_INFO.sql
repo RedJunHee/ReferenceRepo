@@ -15,30 +15,30 @@ ALTER TABLE USER_INFO ADD CONSTRAINT PK_USER PRIMARY KEY NONCLUSTERED (
 
 ALTER TABLE USER_INFO ADD CONSTRAINT UNIQUE_USER_PHONE UNIQUE (PHONE)
  
--- UserID °Ë»ö.
+-- UserID ê²€ìƒ‰.
 CREATE NONCLUSTERED INDEX [NC1_USER_COL_USERID] ON USER_INFO ([USER_ID]) WITH FILLFACTOR = 90 ON [PRIMARY]
 
--- ÇÚµåÆù °Ë»ö.
+-- 2. ì¸ì¦ë²ˆí˜¸ í™•ì¸ ìš”ì²­ í›„ ê°€ì…ëœ ì‚¬ìš©ìì¸ì§€ íŒë³„ í•  ë•Œ ì‚¬ìš©í•¨.
 CREATE NONCLUSTERED INDEX [NC2_USER_COL_PHONE] ON USER_INFO ([PHONE]) WITH FILLFACTOR = 90 ON [PRIMARY]
 
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'»ç¿ëÀÚ À¯´ÏÅ© ID (MPS+³â+¿ù+ÀÏ+ÇÚµåÆù¹øÈ£)' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ì‚¬ìš©ì ìœ ë‹ˆí¬ ID (MPS+ë…„+ì›”+ì¼+í•¸ë“œí°ë²ˆí˜¸)' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'USER_INFO', @level2type=N'COLUMN',@level2name=N'SUID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ÇÑ±Û, ¼ıÀÚ, ¿µ¹®À¸·Î ÃÖ´ë XÀÚ ±îÁö ÀÔ·Â °¡´É' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'í•œê¸€, ìˆ«ì, ì˜ë¬¸ìœ¼ë¡œ ìµœëŒ€ Xì ê¹Œì§€ ì…ë ¥ ê°€ëŠ¥' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'USER_INFO', @level2type=N'COLUMN',@level2name=N'USER_ID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'»ç¿ëÀÚ ÀÌ¸§  ÃÖ´ë 5ÀÚ ±îÁö °¡´É' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ì‚¬ìš©ì ì´ë¦„  ìµœëŒ€ 5ì ê¹Œì§€ ê°€ëŠ¥' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'USER_INFO', @level2type=N'COLUMN',@level2name=N'NAME';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'»ç¿ëÀÚ ÇÚµåÆù ¹øÈ£' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ì‚¬ìš©ì í•¸ë“œí° ë²ˆí˜¸' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'USER_INFO', @level2type=N'COLUMN',@level2name=N'PHONE';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'»ç¿ëÀÚ ÇÁ·ÎÇÊ »çÁø URL' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ì‚¬ìš©ì í”„ë¡œí•„ ì‚¬ì§„ URL' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'USER_INFO', @level2type=N'COLUMN',@level2name=N'PROFILE_URL';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'FCM ÅäÅ«' , @level0type=N'SCHEMA',@level0name=N'dbo',
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'FCM í† í°' , @level0type=N'SCHEMA',@level0name=N'dbo',
  @level1type=N'TABLE',@level1name=N'USER_INFO', @level2type=N'COLUMN',@level2name=N'FCM_TOKEN';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'È¸¿ø°¡ÀÔ ³¯Â¥' , @level0type=N'SCHEMA',@level0name=N'dbo',
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'íšŒì›ê°€ì… ë‚ ì§œ' , @level0type=N'SCHEMA',@level0name=N'dbo',
  @level1type=N'TABLE',@level1name=N'USER_INFO', @level2type=N'COLUMN',@level2name=N'CREATE_DT';
