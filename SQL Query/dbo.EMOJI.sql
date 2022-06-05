@@ -12,22 +12,27 @@ ALTER TABLE EMOJI ADD CONSTRAINT PK_EMOJI  PRIMARY KEY CLUSTERED ( EMOJI_ID ASC 
 
 
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'¿Ã∏¡ˆ ∞Ì¿Ø ID' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ïù¥Î™®ÏßÄ Í≥†Ïú† ID' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'EMOJI', @level2type=N'COLUMN',@level2name=N'EMOJI_ID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'¿Ã∏¡ˆ ¿ÃπÃ¡ˆ ∞Ê∑Œ' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ïù¥Î™®ÏßÄ Ïù¥ÎØ∏ÏßÄ Í≤ΩÎ°ú' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'EMOJI', @level2type=N'COLUMN',@level2name=N'EMOJI_IMG';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'¿Ã∏¡ˆ ªÁøÎ ø©∫Œ(ABLE,DISABLE)' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ïù¥Î™®ÏßÄ ÏÇ¨Ïö© Ïó¨Î∂Ä(ABLE,DISABLE)' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'EMOJI', @level2type=N'COLUMN',@level2name=N'EMOJI_STATUS';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'¿Ã∏¡ˆ ∞™' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ïù¥Î™®ÏßÄ Í∞í' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'EMOJI', @level2type=N'COLUMN',@level2name=N'EMOJI_VALUE';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ª˝º∫≥Ø¬•' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ÏÉùÏÑ±ÎÇ†Ïßú' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'EMOJI', @level2type=N'COLUMN',@level2name=N'CREATE_DT';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ºˆ¡§ ≥Ø¬•' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ÏàòÏ†ï ÎÇ†Ïßú' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'EMOJI', @level2type=N'COLUMN',@level2name=N'UPDATE_DT';
 
 
+INSERT INTO dbo.EMOJI (EMOJI_ID, EMOJI_IMG, EMOJI_STATUS, EMOJI_VALUE, CREATE_DT, UPDATE_DT) VALUES (0, N'NONE', N'ACTIVE', N'NONE', N'2022-04-25 15:08:14.500', N'2022-05-21 15:19:51.367');
+INSERT INTO dbo.EMOJI (EMOJI_ID, EMOJI_IMG, EMOJI_STATUS, EMOJI_VALUE, CREATE_DT, UPDATE_DT) VALUES (1, N'1', N'ACTIVE', N'Í∞ÄÍ≥†Ïã∂Ïñ¥Ïöî', N'2022-04-25 15:08:14.647', N'2022-05-21 15:19:51.380');
+INSERT INTO dbo.EMOJI (EMOJI_ID, EMOJI_IMG, EMOJI_STATUS, EMOJI_VALUE, CREATE_DT, UPDATE_DT) VALUES (2, N'2', N'ACTIVE', N'ÎèÑÏõÄ ÎêêÏñ¥Ïöî', N'2022-04-25 15:08:14.673', N'2022-05-21 15:19:51.380');
+INSERT INTO dbo.EMOJI (EMOJI_ID, EMOJI_IMG, EMOJI_STATUS, EMOJI_VALUE, CREATE_DT, UPDATE_DT) VALUES (3, N'3', N'ACTIVE', N'Í∞ôÏù¥ Í∞ÄÏöî', N'2022-04-25 15:08:14.823', N'2022-05-21 15:19:51.380');
+INSERT INTO dbo.EMOJI (EMOJI_ID, EMOJI_IMG, EMOJI_STATUS, EMOJI_VALUE, CREATE_DT, UPDATE_DT) VALUES (4, N'4', N'ACTIVE', N'Ï¢ãÏïÑÏöî', N'2022-04-25 15:08:14.850', N'2022-05-21 15:19:51.380');

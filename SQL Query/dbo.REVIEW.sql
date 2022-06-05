@@ -3,7 +3,7 @@ CREATE TABLE REVIEW (
 	PLACE_ID	VARCHAR(20)	NOT NULL,
 	USER_SUID	VARCHAR(18)	NOT NULL,
 	CONTENT	VARCHAR(1000)	NOT NULL,
-	IMG_URL	VARCHAR(100)	NULL,
+	IMG_URL	VARCHAR(1000)	NULL,
 	CREATE_DT	DATETIME	NOT NULL,
 	UPDATE_DT	DATETIME	NOT NULL
 );
@@ -27,24 +27,24 @@ REFERENCES USER_INFO (
 	SUID
 );
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'∏Æ∫‰ ∞Ì¿Ø æ∆¿Ãµ IDENTITY VALUE' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Î¶¨Î∑∞ Í≥†Ïú† ÏïÑÏù¥Îîî IDENTITY VALUE' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'REVIEW', @level2type=N'COLUMN',@level2name=N'REVIEW_ID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'¿Âº“ ∞Ì¿Ø ID' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Ïû•ÏÜå Í≥†Ïú† ID' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'REVIEW', @level2type=N'COLUMN',@level2name=N'PLACE_ID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ªÁøÎ¿⁄ ¿Ø¥œ≈© ID (MPS+≥‚+ø˘+¿œ+«⁄µÂ∆˘π¯»£)' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ÏÇ¨Ïö©Ïûê Ïú†ÎãàÌÅ¨ ID (MPS+ÎÖÑ+Ïõî+Ïùº+Ìï∏ÎìúÌè∞Î≤àÌò∏)' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'REVIEW', @level2type=N'COLUMN',@level2name=N'USER_SUID';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'∏Æ∫‰ ≥ªøÎ √÷¥Î 500¿⁄' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Î¶¨Î∑∞ ÎÇ¥Ïö© ÏµúÎåÄ 500Ïûê' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'REVIEW', @level2type=N'COLUMN',@level2name=N'CONTENT';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'∏Æ∫‰ ªÁ¡¯ ∞Ê∑Œ URL' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Î¶¨Î∑∞ ÏÇ¨ÏßÑ Í≤ΩÎ°ú URL' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'REVIEW', @level2type=N'COLUMN',@level2name=N'IMG_URL';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ª˝º∫ ≥Ø¬•' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ÏÉùÏÑ± ÎÇ†Ïßú' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'REVIEW', @level2type=N'COLUMN',@level2name=N'CREATE_DT';
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ºˆ¡§ ≥Ø¬•' , @level0type=N'SCHEMA',@level0name=N'dbo', 
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'ÏàòÏ†ï ÎÇ†Ïßú' , @level0type=N'SCHEMA',@level0name=N'dbo', 
 @level1type=N'TABLE',@level1name=N'REVIEW', @level2type=N'COLUMN',@level2name=N'UPDATE_DT';
 
